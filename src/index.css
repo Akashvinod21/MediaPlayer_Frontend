@@ -1,0 +1,20 @@
+*{
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    margin: 0px;
+    padding: 0px;
+    
+  }
+  body{
+    overflow-x: hidden;
+  }
+
+  @media(max-width:600px){
+    .hide{
+      display: none;
+    }
+  }
+  
