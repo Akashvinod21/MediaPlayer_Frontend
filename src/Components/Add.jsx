@@ -37,7 +37,12 @@ function Add({setAddVideoStatus}) {
   const handleUpload =async(e)=>{
     e.preventDefault()
 
-    const result = await allVideoApi(videoDetails)
+    const {caption,imageUrl,embedLink}=videoDetails
+    if(!caption || !imageUrl || !embedLink){
+      toast.info('Please fill the form completely')
+    }
+    else{
+      const result = await allVideoApi(videoDetails)
 
     if(result.status>=200 && result.status<300){
       toast.success('Video added succesfully')
@@ -50,7 +55,9 @@ function Add({setAddVideoStatus}) {
     }
     console.log(result);
   }
+    }
 
+    
   return (
     <>
     <div className='d-flex align-items-center justify-content-center'>
